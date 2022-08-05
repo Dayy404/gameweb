@@ -1,0 +1,1082 @@
+
+/*
+    BACK BUTTON
+*/
+.back-btns{
+    display: flex;
+    margin: 2rem 0;
+}
+
+.btn{
+   position: absolute;
+  top: 210vh;
+  right: 20px;
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #feba1b;
+    border-radius: 20px;
+    padding: 0.55rem 0;
+    width: 130px;
+    font-weight: 600;
+    background: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color:#feba1b
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+h3
+{
+  position: absolute;
+  top: 10px;
+  font-size: 5vw;
+  color: #252839;
+  -webkit-text-stroke: 0.3vw #329d52;
+  text-transform: uppercase;
+
+}
+h3::before
+{
+  content: attr(data-text);
+position: absolute;
+  top: 0;
+  left: 0;
+width: 0;
+  height: 100%;
+  color: #01fe87;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #01fe87;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%,90%
+  {
+    width: 100%;
+  }
+}
+
+/*
+-- General Style --
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 210vh;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.toggle i {
+  width: 50%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.toggle .ball {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin: 7.5px;
+  border-radius: 50%;
+}
+
+input {
+  display: none;
+}
+
+/*
+ Light Mode
+*/
+
+.light {
+  background: #fafafa;
+}
+
+.light .toggle {
+  background: linear-gradient(145deg, #e1e1e1, #fff);
+  box-shadow: 3px 3px 4px #e6e6e6, -3px -3px 4px #ffffff ;
+}
+
+.light .toggle .bxs-sun {
+  color: #fafafa;
+}
+
+.light .toggle .bx-moon {
+  color: #151d2a;
+}
+
+.light .toggle .ball {
+  background: #151d2a;
+}
+
+/*
+ Dark Mode
+*/
+
+.dark {
+  background: #151d2a;
+}
+
+.dark .toggle {
+  background: #151d2a;
+  box-shadow: 3px 3px 3px #0e131b, -3px -3px 3px #1c2739;
+}
+
+.dark .toggle .bxs-sun {
+  color: #fafafa;
+}
+
+.dark .toggle .bx-moon {
+  color: #151d2a;
+}
+
+.dark .toggle .ball {
+  background: #fafafa;
+  transform: translateX(60px);
+}
+
+
+/*
+ --- Crazy Games ---
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.card {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.card .card-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.card:hover .card-bg img {
+    transform: scale(1.05);
+}
+
+.card .card-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.card:hover .card-context {
+    transform: translateY(0);
+}
+
+.card .card-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.card .card-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.card .card-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.card:hover .card-context p {
+    opacity: 1;
+}
+
+.card .card-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.card .card-context button:hover {
+    background: #dfa319;
+}
+
+.card .card-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.card:hover .card-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card .card-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.card .card-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+}
+
+/*
+ --- Games.co.id ---
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.gmscard {
+    position: absolute;
+    right: 10px;
+    top: 525px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.gmscard .gmscard-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.gmscard .gmscard-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.gmscard:hover .gmscard-bg img {
+    transform: scale(1.05);
+}
+
+.gmscard .gmscard-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.gmscard:hover .gmscard-context {
+    transform: translateY(0);
+}
+
+.gmscard .gmscard-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.gmscard .gmscard-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.gmscard .gmscard-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.gmscard:hover .gmscard-context p {
+    opacity: 1;
+}
+
+.gmscard .gmscard-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.gmscard .gmscard-context button:hover {
+    background: #dfa319;
+}
+
+.gmscard .gmscard-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.gmscard:hover .gmscard-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.gmscard .gmscard-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.gmscard .gmscard-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+  }
+
+/*
+   MINI PLAY
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.miniplaycard {
+    position: absolute;
+  left: 10px;
+    top: 100px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.miniplaycard .miniplaycard-bg{
+    width: 100%;
+    height: 100%;
+}
+
+.miniplaycard .miniplaycard-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.monascard:hover .monascard-bg img {
+    transform: scale(1.05);
+}
+
+.miniplaycard .miniplaycard-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.miniplaycard:hover .miniplaycard-context {
+    transform: translateY(0);
+}
+
+.miniplaycard .miniplaycard-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.miniplaycard .miniplaycard-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.miniplaycard .miniplaycard-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.miniplaycard:hover .miniplaycard-context p {
+    opacity: 1;
+}
+
+.miniplaycard .miniplaycard-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.miniplaycard .miniplaycard-context button:hover {
+    background: #dfa319;
+}
+
+.miniplaycard .miniplaycard-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.miniplaycard:hover .miniplaycard-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.miniplaycard .miniplaycard-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.miniplaycard .miniplaycard-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+}
+
+/*
+ --- Poki Games ---
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.pokicard {
+    position: absolute;
+    right: 74.5vh;
+    top: 100px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.pokicard .pokicard-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.pokicard .pokicard-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.pokicard:hover .pokicard-bg img {
+    transform: scale(1.05);
+}
+
+.pokicard .pokicard-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.pokicard:hover .pokicard-context {
+    transform: translateY(0);
+}
+
+.pokicard .pokicard-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.pokicard .pokicard-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.pokicard .pokicard-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.pokicard:hover .pokicard-context p {
+    opacity: 1;
+}
+
+.pokicard .pokicard-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.pokicard .pokicard-context button:hover {
+    background: #dfa319;
+}
+
+.pokicard .pokicard-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.pokicard:hover .pokicard-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pokicard .pokicard-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.pokicard .pokicard-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+  }
+
+/*
+ --- ev.io ---
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.evcard {
+    position: absolute;
+    left: 10px;
+    top: 525px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.evcard .evcard-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.evcard .evcard-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.evcard:hover .evcard-bg img {
+    transform: scale(1.05);
+}
+
+.evcard .evcard-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.evcard:hover .evcard-context {
+    transform: translateY(0);
+}
+
+.evcard .evcard-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.evcard .evcard-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.evcard .evcard-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.evcard:hover .evcard-context p {
+    opacity: 1;
+}
+
+.evcard .evcard-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.evcard .evcard-context button:hover {
+    background: #dfa319;
+}
+
+.evcard .evcard-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.evcard:hover .evcard-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.evcard .evcard-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.evcard .evcard-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+  }
+
+/*
+ --- Friv ---
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5ffff;
+}
+
+.frivcard {
+    position: absolute;
+    right: 74.5vh;
+    top: 525px;
+    width: 306px;
+    height: 408px;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.frivcard .frivcard-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.frivcard .frivcard-bg img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-out;
+}
+
+.frivcard:hover .frivcard-bg img {
+    transform: scale(1.05);
+}
+
+.frivcard .frivcard-context {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    font-family: 'Poppins';
+    transform: translateY(68%);
+    transition: .2s ease-out;
+}
+
+.frivcard:hover .frivcard-context {
+    transform: translateY(0);
+}
+
+.frivcard .frivcard-context .dark-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background: linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)   
+    );
+    filter: blur(20px);
+    transition: .2s ease-out;
+}
+
+.frivcard .frivcard-context h2 {
+    position: absolute;
+    left: 32px;
+    color: #fff;
+}
+
+.frivcard .frivcard-context p {
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    width: 82%;
+    line-height: 20px;
+    word-spacing: -2px;
+    color: #f9f9f9;
+    text-align: justify;
+    opacity: 0;
+    transition: .2s ease-out;
+}
+
+.frivcard:hover .frivcard-context p {
+    opacity: 1;
+}
+
+.frivcard .frivcard-context button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: #000;
+    background: #feba1b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: .4s;
+}
+
+.frivcard .frivcard-context button:hover {
+    background: #dfa319;
+}
+
+.frivcard .frivcard-icons {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    opacity: 0;
+    transform: translateX(40px) scale(.5);
+    transform-origin: top;
+    transition: .2s ease-out;
+}
+
+.frivcard:hover .frivcard-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.frivcard .frivcard-icons li {
+    cursor: pointer;
+    color: #000;
+    background: #fffaee;
+    font-size: 22px;
+    margin: 0 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 3px;
+    transition: .2s ease-out;
+}
+
+.frivcard .frivcard-icons li:hover {
+    background: #feba1b;
+    transform: translateX(-5px);
+  }
+
+
+/*
+  CREDIT
+*/
+h6
+{
+  position: absolute;
+  height: 5px;
+ left: 300px;
+  font-size: 5vw;
+  width: 50px;
+  top: 210vh;
+  color: #dfa319;
+}
